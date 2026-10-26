@@ -1,0 +1,425 @@
+getgenv().Nousigi = true
+ 
+getgenv().UIColor = {
+	["Background 1 Color"] = Color3.fromRGB(28, 28, 34),
+	["Background 1 Transparency"] = 0.25,
+	["Background 2 Color"] = Color3.fromRGB(38, 38, 46),
+	["Background 3 Color"] = Color3.fromRGB(48, 48, 56),
+	["Background Image"] = "",
+	["Background Main Color"] = Color3.fromRGB(18, 18, 22),
+	["Border Color"] = Color3.fromRGB(90, 90, 70),
+	["Box Highlight Color"] = Color3.fromRGB(255, 214, 94),
+	["Button Color"] = Color3.fromRGB(255, 214, 94),
+	["Click Effect Color"] = Color3.fromRGB(230, 230, 220),
+	["Dropdown Icon Color"] = Color3.fromRGB(220, 220, 210),
+	["Dropdown Selected Check Color"] = Color3.fromRGB(250, 190, 50),
+	["Dropdown Selected Color"] = Color3.fromRGB(255, 214, 94),
+	["GUI Text Color"] = Color3.fromRGB(235, 235, 230),
+	["Label Color"] = Color3.fromRGB(240, 240, 230),
+	["Logo Image"] = "rbxassetid://5009915795",
+	["Page Selected Color"] = Color3.fromRGB(255, 214, 94),
+	["Placeholder Text Color"] = Color3.fromRGB(170, 170, 160),
+	["Search Icon Color"] = Color3.fromRGB(240, 240, 230),
+	["Search Icon Highlight Color"] = Color3.fromRGB(255, 214, 94),
+	["Section Text Color"] = Color3.fromRGB(220, 220, 210),
+	["Section Underline Color"] = Color3.fromRGB(255, 200, 72),
+	["Setting Icon Color"] = Color3.fromRGB(220, 220, 210),
+	["Slider Highlight Color"] = Color3.fromRGB(255, 214, 94),
+	["Slider Line Color"] = Color3.fromRGB(80, 80, 60),
+	["Text Color"] = Color3.fromRGB(235, 235, 230),
+	["Text Stroke Transparency"] = 0.85,
+	["Textbox Highlight Color"] = Color3.fromRGB(255, 214, 94),
+	["Title Text Color"] = Color3.fromRGB(255, 214, 94),
+	["Toggle Border Color"] = Color3.fromRGB(255, 214, 94),
+	["Toggle Checked Color"] = Color3.fromRGB(250, 190, 50),
+	["Toggle Desc Color"] = Color3.fromRGB(190, 190, 180),
+	["Tween Animation 1 Speed"] = 0,
+	["Tween Animation 2 Speed"] = 0,
+	["Tween Animation 3 Speed"] = 0
+}
+ 
+getgenv().UIToggled = false
+ 
+local TweenService = game:GetService("TweenService")
+ 
+local UserInputService = game:GetService("UserInputService")
+ 
+local RunService = game:GetService("RunService")
+ 
+local ScreenGui = Instance.new("ScreenGui")
+ 
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ 
+ScreenGui.Name = "Nousigi Hub GUI"
+ 
+ScreenGui.Enabled = false
+ 
+getgenv().ReadyForGuiLoaded = false
+ 
+spawn(function(...)
+	 
+	task.wait()
+	 
+	task.wait()
+	 
+end)
+ 
+local ScreenGui2 = Instance.new("ScreenGui")
+ 
+ScreenGui2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ 
+ScreenGui2.Name = "Nousigi Hub Notification"
+ 
+local ScreenGui3 = Instance.new("ScreenGui")
+ 
+ScreenGui3.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ 
+ScreenGui3.Name = "Nousigi Hub Btn"
+ 
+local TextButton = Instance.new("TextButton", ScreenGui3)
+ 
+TextButton.BackgroundTransparency = 1
+ 
+TextButton.Text = ""
+ 
+TextButton.AnchorPoint = Vector2.new(0, 1)
+ 
+TextButton.Size = UDim2.new(0, 50, 0, 50)
+ 
+TextButton.Position = UDim2.new(0, 15, 1, -15)
+ 
+local Frame = Instance.new("Frame", TextButton)
+ 
+Frame.AnchorPoint = Vector2.new(0, 1)
+ 
+Frame.Size = UDim2.new(0, 50, 0, 50)
+ 
+Frame.Position = UDim2.new(0, 0, 1, 0)
+ 
+Frame.Name = "dut dit"
+ 
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ 
+Frame.BackgroundTransparency = 0.25
+ 
+local ImageLabel = Instance.new("ImageLabel", TextButton)
+ 
+ImageLabel.AnchorPoint = Vector2.new(0, 0)
+ 
+ImageLabel.Image = "rbxassetid://5009915795"
+ 
+ImageLabel.BackgroundTransparency = 1
+ 
+ImageLabel.Size = UDim2.new(0, 30, 0, 30)
+ 
+ImageLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+ 
+ImageLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+ 
+local UICorner = Instance.new("UICorner")
+ 
+UICorner.Parent = Frame
+ 
+UICorner.CornerRadius = UDim.new(1, 0)
+ 
+TextButton.InputBegan:Connect(function(input, gameProcessed)
+end)
+ 
+TextButton.InputEnded:Connect(function(input2, gameProcessed2)
+end)
+ 
+TextButton.InputChanged:Connect(function(input3, gameProcessed3)
+end)
+ 
+RunService.RenderStepped:Connect(function(deltaTime)
+end)
+ 
+TextButton.MouseButton1Click:Connect(function()
+	 
+	getgenv().UIToggled = true
+	 
+	local tween3 = TweenService:Create(ImageLabel, TweenInfo.new(0), { Size = UDim2.new(0, 40, 0, 40) })
+	 
+	tween3:Play()
+	 
+	local tween4 = TweenService:Create(Frame, TweenInfo.new(0), { BackgroundTransparency = 0 })
+	 
+	tween4:Play()
+	 
+	game.CoreGui:FindFirstChild("Nousigi Hub GUI")
+	 
+	local children = game.CoreGui:GetChildren()
+	 
+	for i, v in ipairs(children) do
+	end
+end)
+ 
+local Frame2 = Instance.new("Frame")
+ 
+local UIListLayout = Instance.new("UIListLayout")
+ 
+Frame2.Name = "NotiContainer"
+ 
+Frame2.Parent = ScreenGui2
+ 
+Frame2.AnchorPoint = Vector2.new(1, 1)
+ 
+Frame2.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+ 
+Frame2.BackgroundTransparency = 1
+ 
+Frame2.Position = UDim2.new(1, -5, 1, -5)
+ 
+Frame2.Size = UDim2.new(0, 350, 1, -10)
+ 
+UIListLayout.Name = "NotiList"
+ 
+UIListLayout.Parent = Frame2
+ 
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+ 
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+ 
+UIListLayout.Padding = UDim.new(0, 5)
+ 
+local CoreGui = game:GetService("CoreGui")
+ 
+ScreenGui.Parent = CoreGui
+ 
+ScreenGui2.Parent = CoreGui
+ 
+ScreenGui3.Parent = CoreGui
+ 
+getgenv().TitleNameNoti = "UI Library"
+ 
+local Frame3 = Instance.new("Frame")
+ 
+local Frame4 = Instance.new("Frame")
+ 
+local UICorner2 = Instance.new("UICorner")
+ 
+local Frame5 = Instance.new("Frame")
+ 
+local ImageLabel2 = Instance.new("ImageLabel")
+ 
+local UICorner3 = Instance.new("UICorner")
+ 
+local TextLabel = Instance.new("TextLabel")
+ 
+local Frame6 = Instance.new("Frame")
+ 
+local ImageLabel3 = Instance.new("ImageLabel")
+ 
+local TextButton2 = Instance.new("TextButton")
+ 
+local TextLabel2 = Instance.new("TextLabel")
+ 
+Frame3.Name = "NotiFrame"
+ 
+Frame3.Parent = Frame2
+ 
+Frame3.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+ 
+Frame3.BackgroundTransparency = 1
+ 
+Frame3.ClipsDescendants = true
+ 
+Frame3.Position = UDim2.new(0, 0, 0, 0)
+ 
+Frame3.Size = UDim2.new(1, 0, 0, 0)
+ 
+Frame3.AutomaticSize = Enum.AutomaticSize.Y
+ 
+Frame4.Name = "Noticontainer"
+ 
+Frame4.Parent = Frame3
+ 
+Frame4.Position = UDim2.new(1, 0, 0, 0)
+ 
+Frame4.Size = UDim2.new(1, 0, 1, 6)
+ 
+Frame4.AutomaticSize = Enum.AutomaticSize.Y
+ 
+Frame4.BackgroundColor3 = Color3.fromRGB(48, 48, 56)
+ 
+UICorner2.CornerRadius = UDim.new(0, 4)
+ 
+UICorner2.Parent = Frame4
+ 
+Frame5.Name = "Topnoti"
+ 
+Frame5.Parent = Frame4
+ 
+Frame5.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+ 
+Frame5.BackgroundTransparency = 1
+ 
+Frame5.Position = UDim2.new(0, 0, 0, 5)
+ 
+Frame5.Size = UDim2.new(1, 0, 0, 25)
+ 
+ImageLabel2.Name = "Ruafimg"
+ 
+ImageLabel2.Parent = Frame5
+ 
+ImageLabel2.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+ 
+ImageLabel2.BackgroundTransparency = 1
+ 
+ImageLabel2.Position = UDim2.new(0, 5, 0, 0)
+ 
+ImageLabel2.Size = UDim2.new(0, 25, 0, 25)
+ 
+ImageLabel2.Image = "rbxassetid://5009915795"
+ 
+UICorner3.CornerRadius = UDim.new(1, 0)
+ 
+UICorner3.Name = "RuafimgCorner"
+ 
+UICorner3.Parent = ImageLabel2
+ 
+TextLabel.Text = "<font color=\"rgb(255,214,94)\">Banana Cat Hub</font> UI Library"
+ 
+TextLabel.Name = "TextLabelNoti"
+ 
+TextLabel.Parent = Frame5
+ 
+TextLabel.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+ 
+TextLabel.BackgroundTransparency = 1
+ 
+TextLabel.Position = UDim2.new(0, 35, 0, 0)
+ 
+TextLabel.Size = UDim2.new(1, -35, 1, 0)
+ 
+TextLabel.Font = Enum.Font.GothamBold
+ 
+TextLabel.TextSize = 14
+ 
+TextLabel.TextWrapped = true
+ 
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+ 
+TextLabel.RichText = true
+ 
+TextLabel.TextColor3 = Color3.fromRGB(235, 235, 230)
+ 
+Frame6.Name = "CloseContainer"
+ 
+Frame6.Parent = Frame5
+ 
+Frame6.AnchorPoint = Vector2.new(1, 0.5)
+ 
+Frame6.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+ 
+Frame6.BackgroundTransparency = 1
+ 
+Frame6.Position = UDim2.new(1, -4, 0.5, 0)
+ 
+Frame6.Size = UDim2.new(0, 22, 0, 22)
+ 
+ImageLabel3.Name = "CloseImage"
+ 
+ImageLabel3.Parent = Frame6
+ 
+ImageLabel3.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+ 
+ImageLabel3.BackgroundTransparency = 1
+ 
+ImageLabel3.Size = UDim2.new(1, 0, 1, 0)
+ 
+ImageLabel3.Image = "rbxassetid://3926305904"
+ 
+ImageLabel3.ImageRectOffset = Vector2.new(284, 4)
+ 
+ImageLabel3.ImageRectSize = Vector2.new(24, 24)
+ 
+ImageLabel3.ImageColor3 = Color3.fromRGB(240, 240, 230)
+ 
+TextButton2.Parent = Frame6
+ 
+TextButton2.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+ 
+TextButton2.BackgroundTransparency = 1
+ 
+TextButton2.Size = UDim2.new(1, 0, 1, 0)
+ 
+TextButton2.Font = Enum.Font.SourceSans
+ 
+TextButton2.Text = ""
+ 
+TextButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
+ 
+TextButton2.TextSize = 14
+ 
+TextLabel2.Name = "TextColor"
+ 
+TextLabel2.Parent = Frame4
+ 
+TextLabel2.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
+ 
+TextLabel2.BackgroundTransparency = 1
+ 
+TextLabel2.Position = UDim2.new(0, 10, 0, 35)
+ 
+TextLabel2.Size = UDim2.new(1, -15, 0, 0)
+ 
+TextLabel2.Font = Enum.Font.GothamBold
+ 
+TextLabel2.Text = "The UI automatically hides once executed.\nPress the button at the bottom-left of the screen to show the GUI."
+ 
+TextLabel2.TextSize = 14
+ 
+TextLabel2.TextXAlignment = Enum.TextXAlignment.Left
+ 
+TextLabel2.RichText = true
+ 
+TextLabel2.TextColor3 = Color3.fromRGB(235, 235, 230)
+ 
+TextLabel2.AutomaticSize = Enum.AutomaticSize.Y
+ 
+TextLabel2.TextWrapped = true
+ 
+local tween = TweenService:Create(Frame4, TweenInfo.new(0), { Position = UDim2.new(0, 0, 0, 0) })
+ 
+tween:Play()
+ 
+TextButton2.MouseEnter:Connect(function(arg)
+	 
+	local tween5 = TweenService:Create(ImageLabel3, TweenInfo.new(0), { ImageColor3 = Color3.fromRGB(255, 214, 94) })
+	 
+	tween5:Play()
+end)
+ 
+TextButton2.MouseLeave:Connect(function(arg2)
+	 
+	local tween6 = TweenService:Create(ImageLabel3, TweenInfo.new(0), { ImageColor3 = Color3.fromRGB(240, 240, 230) })
+	 
+	tween6:Play()
+end)
+ 
+TextButton2.MouseButton1Click:Connect(function()
+	 
+	wait(0.25)
+	 
+	local tween7 = TweenService:Create(Frame4, TweenInfo.new(0), { Position = UDim2.new(1, 0, 0, 0) })
+	 
+	tween7:Play()
+	 
+	wait(0.25)
+	 
+	Frame3:Destroy()
+end)
+ 
+spawn(function(...)
+	 
+	wait(10)
+	 
+	local tween2 = TweenService:Create(Frame4, TweenInfo.new(0), { Position = UDim2.new(1, 0, 0, 0) })
+	 
+	tween2:Play()
+	 
+	wait(0.25)
+	 
+	Frame3:Destroy()
+end)
